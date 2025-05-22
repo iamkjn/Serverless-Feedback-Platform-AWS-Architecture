@@ -5,8 +5,12 @@ This project demonstrates the implementation of a fully serverless feedback coll
 ### Problem Statement:
 Traditional methods of collecting customer feedback often involve managing dedicated servers, databases, and complex authentication systems. This leads to increased operational overhead, scaling challenges, and higher costs, diverting resources from core business activities. A solution was needed that could efficiently capture feedback without the need for constant infrastructure management.
 
+## Architecture Diagram
+
+![Architecture Diagram](diagram/architecture-diagram.png)
+
 ### Architectural Solution:
-The solution leverages a combination of serverless AWS services to create a highly available and scalable feedback platform:
+The solution leverages a combination of serverless AWS services to create a highly available and scalable feedback platform.
 
 ### Frontend (Static Website on S3):
 
