@@ -60,7 +60,19 @@ def lambda_handler(event, context):
             rating = body.get('rating', 0) # Default rating to 0 if not provided
             comment = body.get('comment', '').strip() # Get comment and remove leading/trailing whitespace
             
-            # Validate required fields (e.g., comment and rating)
+            # Validate required fields 
+            if not name:
+                return {
+                    'statusCode': 400,
+                    'headers': cors_headers,
+                    'body': json.dumps({'success': False, 'error': 'Feedback name cannot be empty.'})
+                }
+            if not email:
+                return {
+                    'statusCode': 400,
+                    'headers': cors_headers,
+                    'body': json.dumps({'success': False, 'error': 'Feedback email cannot be empty.'})
+                }
             if not comment:
                 return {
                     'statusCode': 400,
